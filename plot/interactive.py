@@ -11,11 +11,11 @@ def plot_line_i(ticker:str):
         _type_: graphic interactive.
     """
 
-    data= download_data('BBAS3.SA')
+    data= download_data(ticker)
 
     fig= px.line(
             data.reset_index(),
-            x= 'Date', y= 'Close', title= 'ticker',
+            x= 'Date', y= 'Close', title= ticker,
             labels={'Close': 'Fechamento', 'Date': 'Data'} 
         )
 
